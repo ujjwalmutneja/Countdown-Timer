@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="final.css" />
+    <title>EVENT BLOOM</title>
+  </head>
+
+  <body>
+    <div id="show_t" style="height: 75vh; width: 75vw; background-color:white; z-index: 2000; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 1rem; display: none;">
+      <button onclick="document.getElementById('show_t').style.display = 'none'">
+      <div class="settimerelements">
+        <div class="imageofsettime">
+            <img
+              class="imageofclock"
+              src="./finalimages/image_processing20200219-31653-1rvuobx.gif"
+            />
+        </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Enter Date&nbsp;&nbsp;</th>
+                <th>Enter Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input class="inputofdateandtime" type="date" id="date" />
+                </td>
+                <td>
+                  <input class="inputofdateandtime" type="time" id="time" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="calculate">Save</button>
+          <button id="close_button2" onclick="document.getElementById('show_t').style.display = `none`">Close</button>
+          <div class="customization_style_heading">
+            <div class="color-targetingtext">
+              <div class="unitscolor">  
+                <h2>Digits Color</h2>
+                <input  value="#000000" id="digitcolor" class="changethecoloroftext" type="color" />
+              </div>
+              <div class="textcolor">
+                <h2>Text Color</h2>
+                <input value="#FFFFFF" id="textcolor" class="changethecoloroftext" type="color" />
+              </div>
+              <div class="titlecolor">  
+                <h2>
+                  Digits Box color
+                </h2>
+                <input value="#FFFFFF" id="digitsbox" class="changethecoloroftext" type="color" />
+              </div>
+            </div>
+            <div class="titleofcountdown">
+              <h1>CountDown Timer Title</h1>
+              <input
+                type="text"
+                class="titleoftimerr"
+                placeholder="CountDown Timer Title"
+              />
+            </div>
+        </div>
+    </div> 
+    <img class="gifmainpage" src="finalimages/TEDCountdownLogoAnimation-ezgif.com-speed.gif"/>
+    <div class="lineofmainpage"></div>
+    <div class="twothings">
+      <ul>
+        <button class="twothingsbutton" onclick="window.location.href=`login.html`">Login</button>
+      </ul>
+    </div>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" onclick="window.scrollTo(0,0)">HOME</a>
+        <div>
+          <a href="#settime_scroll" id="set_time_scroll">SET EVENT</a>
+          <a href="#liveevents_scroll"id="live_events_scroll">LIVE EVENTS</a>
+          <a href="#pastevents_scroll" id="past_events_scroll">PAST EVENTS</a>
+          <a href="#aboutus_scroll" id="about_us_scroll">ABOUT US</a>
+        </div>
+      </nav>
+      <div class="icons">
+        <div id="circlescroll-btn" class="fa-solid fa-bars"></div>
+      </div>
+    </header>   
+    <img
+      class="imageofbackground"
+      src="finalimages/Screenshot from 2024-03-10 10-16-05.png"
+    />
+    <h2 class="headingofmainpage"></h2>
+    <h1 id="title"></h1>
+    <div class="parallax__container">
+      <img src="./finalimages/assets/bg-1.png" alt="parallax" />
+      <img id="bg-2" src="./finalimages/assets/bg-2.png" alt="parallax" />
+      <img id="bg-3" src="./finalimages/assets/bg-3.png" alt="parallax" />
+    </div>
+    <div class="container">
+      <div class="content" id="settime_scroll" style="scroll-margin-top: 12rem;">
+        <p id="set_here" style="font-size: 50px; font-weight: 600; margin-left: 3rem">
+          SET YOUR DAY....
+        </p>
+        <h1>The Wait Is <span>&nbsp;Almost</span>&nbsp; Over</h1>   
+        <div class="countdown">
+          <div>
+            <p class="heading" id="textdata">DAY</p>
+            <div class="time" id="countdown-days">0</div>
+          </div>
+          <div>
+            <p class="heading" id="textdata">HOURS</p>
+            <div class="time" id="countdown-hours">0</div>
+          </div>
+          <div>
+            <p class="heading" id="textdata">MINUTES&nbsp;</p>
+            <div class="time" id="countdown-minutes">0</div>
+          </div>
+          <div>
+            <p class="heading" id="textdata">SECONDS</p>
+            <div class="time" id="countdown-seconds">0</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-left: 10rem">
+          <button id="timer_init_button" onclick="document.getElementById('show_t').style.display = `block`">Set Timer</button>
+          <button id="stop">Stop</button>
+          <button id="reset">Reset</button>
+        </div>      
+      </div>
+      <img src="../final/finalimages/image.jpg" class="rocket" />
+    </div>
+    <div class="headingofeventsgoingon">EVENTS GOING ON..</div>
+    <section class="about">
+      <div class="image__gallary">
+        <div class="image__card" id="image__card-1">
+          <img src="./images/mo.jpg" alt="grid" width="70px" height="350px "/>
+          <div class="h3">MOOD INDIGO</div>
+          <div class="h2">2 March 2024</div>
+        </div>
+        <div class="image__card" id="image__card-2">
+          <img src="./images/an2.jpg" alt="grid"  width="70px" height="320px" />
+          <div class="h3" >ANTARAGNI</div>
+          <div class="h2">15 March 2024</div>
+        </div>
+        <div class="image__card" id="image__card-3">
+          <img src="./images/ch.jpg" alt="grid"  width="70px" height="320px"/>
+          <div class="h3">Rangrezz </div>
+          <div class="h2">13 March 2024</div>
+        </div>
+        <div class="image__card" id="image__card-4">
+          <img src="./images/saarang-fest.avif" alt="grid" />
+          <div class="h3">SAARANG</div>
+          <div class="h2">5 March 2024</div>
+        </div>
+      </div>
+    </section>
+    <div class="imagesliderofmaingpage">
+      <div id="slide">
+        <div class="headingofpastevents" id="pastevents_scroll" style="scroll-margin-top: 5rem;">ALL PAST EVENTS</div>
+        <div
+          class="item"
+          style="background-image: url(./finalimages/assets/h1.png)"
+        >
+          <div class="content">
+            <div class="name" style="color: brown">Spring Fest</div>
+            <div class="des" style="color: white; font-size: 20px">
+              Spring Fest, popularly known as SF, is the annual social &
+              cultural festival of Indian Institute of Technology, Kharagpur
+              held during the month of January in the spring semester. The
+              Spring Fest is held for 4 nights and 3 days...
+            </div>
+            <button>2 MARCH 2024</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(./finalimages/assets/bom.jpg)"
+        >
+          <div class="content">
+            <div class="name" style="color: #96485A">Tech-Fest</div>
+            <div class="des" style="color: white; font-size: 20px">
+              IIT Bombay will host the 27th edition of Asia’s largest science
+              and technology festival – Techfest 2023-2024. Spearheaded by the
+              students at IIT Bombay,
+            </div>
+            <button>5 MARCH 2023</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(./finalimages/assets/bitsp.jpg)"
+        >
+          <div class="content">
+            <div class="name" style="color: #96485A">Waves</div>
+            <div class="des" style="color: white; font-size: 20px">
+              Waves is the annual cultural festival of BITS Pilani, K K Birla
+              Goa Campus. It is a three-day-long festival held in the late
+              October – early November period. It is a cultural festival that is
+              held annually to celebrate music, dance and art.
+            </div>
+            <button>09 MARCH 2024</button>
+          </div>  
+        </div>
+        <div
+          class="item"
+          style="background-image: url(./finalimages/assets/th.png) "
+        >
+          <div class="content">
+            <div class="name" style="color:white">SATURNALIA</div>
+            <div class="des" style="color: white">
+              Saturnalia 2023 fuels ingenuity through engaging activities,
+              competitions, and workshops, inspiring participants to challenge
+              norms and explore new horizons in knowledge and innovation.
+            </div>
+            <button>2 FEB 2024</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(./finalimages/assets/waves.jpeg)"
+        >
+          <div class="content">
+            <div class="name" style="color:white">Antaragni</div>
+            <div class="des" style="color: white">
+              Continuing Its Rich Legacy Of 57 Years, Antaragni Combines The
+              Zeal And Desire Of The Students Of IIT Kanpur And Across India To
+              Showcase And Celebrate Their Amazing Cultural Talent As It Has
+              Evolved To Be A Platform For Global Cultural Interaction Over The
+              Years.
+            </div>
+            <button>27 FEB 2024</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right">></i></button>
+      </div>
+    </div>
+
+    <div class="headingofaboutpage" id="aboutus_scroll" style="scroll-margin-top: 5rem;">ABOUT US</div>
+    <div class="containerth">
+      <div class="card">
+        <div class="text1"><h2>Our Mission</h2></div>
+        <div class="text2"><p>
+          Our mission at "EVENTBLOOM" is to empower individuals and organizations to maximize anticipation and excitement for their upcoming events through innovative and user-friendly countdown timer solutions. 
+        </p></div>
+      </div>
+      <div class="card">
+        <div class="text1"><h2>Our Vision</h2></div>
+        <div class="text2"><p>
+          At EVENTBLOOM, our vision is to revolutionize the way people anticipate and engage with events worldwide. We envision a future where our countdown timer solutions seamlessly integrate into every aspect of event planning, from personal celebrations to large-scale gatherings
+        </p></div>
+      </div>
+      <div class="card">
+        <div class="text1"><h2>Our Values</h2></div>
+        <div class="text2"><p>
+          At EVENT BLOOM, we are driven by innovation, putting users first, and ensuring reliability in everything we do. We believe in accessibility, transparency, and the power of collaboration to achieve our goals. Our focus is on making a positive impact through adaptable solutions that inspire anticipation and create memorable event experiences.
+        </p></div>
+      </div>
+      <div class="card">
+        <div class="text1"><h2>Why Choose Us</h2></div>
+        <div class="text2"><p>
+          Choose us for your event countdown timer needs because we offer innovative solutions tailored to elevate your event experience. With customizable options to align with your event's theme and branding, our reliable platform ensures seamless functionality even during peak usage
+        </p></div>
+      </div>
+    </div>
+    <script src="final.js" defer></script>
+  </body>
+</html>
